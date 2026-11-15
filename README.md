@@ -236,3 +236,8 @@ See the [CONTRIBUTING](/CONTRIBUTING.md) file for how to help out.
 ## License
 
 Flipper is MIT licensed, as found in the [LICENSE](/LICENSE) file.
+
+## Fork validation policy
+
+This fork is used for compatibility validation. Publication and deployment steps
+are guarded against running under `dayanruben`; build and test steps remain available.

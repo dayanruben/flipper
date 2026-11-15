@@ -32,7 +32,7 @@ jobs:
           version_tag_prefix: "v"
           version_assertion_command: 'grep -q "\"version\": \"$version\"" desktop/package.json'
       - name: Create release
-        if: ${{ steps.tag-version-commit.outputs.tag != '' }}
+        if: github.repository_owner != 'dayanruben' && (steps.tag-version-commit.outputs.tag != '')
         uses: softprops/action-gh-release@v0.1.15
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -150,7 +150,7 @@ jobs:
           name: "flipper-server.tgz"
           path: "flipper-server.tgz"
       - name: GitHub Upload Release Artifacts
-        if: ${{ needs.release.outputs.tag != '' }}
+        if: github.repository_owner != 'dayanruben' && (needs.release.outputs.tag != '')
         uses: softprops/action-gh-release@v0.1.15
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
