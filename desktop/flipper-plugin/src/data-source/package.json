@@ -18,6 +18,8 @@
   ],
   "devDependencies": {
     "@reach/observe-rect": "^1.2.0",
+    "@types/lodash": "4.14.168",
+    "@types/react": "17.0.39",
     "lodash": "^4.17.21",
     "microbundle": "^0.13.0",
     "react-virtual": "^2.6.2",

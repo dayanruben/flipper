@@ -1165,8 +1165,9 @@ export class DataSourceView<T, KeyType> {
       this.filterExceptions &&
       !entry.visible[this.viewId]
     ) {
-      const keyValue = entry.value[this.datasource.keyAttribute] as KeyType;
-      entry.visible[this.viewId] = this.filterExceptions.has(keyValue);
+      const keyValue = entry.value[this.datasource.keyAttribute];
+      const filterExceptions: ReadonlySet<unknown> = this.filterExceptions;
+      entry.visible[this.viewId] = filterExceptions.has(keyValue);
     }
   }
 }
