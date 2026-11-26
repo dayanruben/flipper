@@ -35,7 +35,7 @@
   },
   "resolutions": {
     "logkitty": "0.7.1",
-    "minimist": "1.2.3",
+    "minimist": "1.2.8",
     "kind-of": "6.0.3",
     "node-fetch": "^2.6.7",
     "browserslist": "^4.16.5",
